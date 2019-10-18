@@ -17,7 +17,7 @@ def get_user_commits(login, github_profile):
 
     with open('CONTRIBUTORS.md', 'a') as contributor_file:
         contributor_file.write(f"<br/>{login} {github_profile}<br/>")
-        counter = 1
+        counter = 0
         for commits_by_user in r:
             commit_sha = commits_by_user['html_url'].split('/')[-1][:7]
             counter += 1
