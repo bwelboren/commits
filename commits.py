@@ -7,7 +7,7 @@ def get_user_info():
     r = r.json()
 
     for contributor in r:
-        get_user_commits(contributor['login'], contributor['url'])
+        get_user_commits(contributor['login'], contributor['html_url'])
 
 def get_user_commits(login, github_profile):
     URL = "https://api.github.com/repos/realaltffour/GraphSolver/commits"
